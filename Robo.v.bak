@@ -1,0 +1,120 @@
+module Robo (clock, reset, head, left, avancar, girar);
+	
+	input clock, reset, head, left;
+	output reg avancar, girar;
+
+	reg [1:0] state;
+
+	parameter procurando_muro = 2'b00,
+				 acompanhando_muro = 2'b01,		
+				 rotacionando = 2'b10;
+				 
+	initial state <= a;
+	
+	// Lógica para estados
+	always @(negedge clock, negedge reset) begin
+		
+		if (reset == 1'b0) state <= procurando_muro;
+		else begin
+			case (state)
+				procurando_muro: begin
+					case ({head, left}
+						2'b00: state <= procurando_muro;
+						2'b01: state <= acompanhando_muro;
+						2'b10: state <= rotacionando;
+						2'b11: state <= rotacionando;
+					endcase
+				end
+				
+				acompanhando_muro: begin
+					case ({head, left}
+						2'b00: state <= procurando_muro;
+						2'b01: state <= acompanhando_muro;
+						2'b10: state <= procurando_muro;
+						2'b11: state <= rotacionando;
+					endcase
+				
+				end
+				
+				rotacionando: begin
+					case ({head, left}
+						2'b00: state <= rotacionando;
+						2'b01: state <= acompanhando_muro;
+						2'b10: state <= rotacionando;
+						2'b11: state <= rotacionando;
+					endcase
+				end
+			endcase
+		end
+	end
+	
+	// Lógica para saídas
+	always @(state, head, left) begin
+		case (state)
+			procurando_muro: begin
+				case ({head, left}
+						2'b00: begin
+							avancar = 1;
+							girar = 0;
+						end;
+						2'b01: begin
+							avancar = 1;
+							girar = 0;
+						end
+						2'b10: begin
+							avancar = 0;
+							girar = 1;
+						end
+						2'b11: begin
+							avancar = 0;
+							girar = 1;
+						end
+					endcase
+			end
+			
+			acompanhando_muro: begin
+				case ({head, left}
+						2'b00: begin
+							avancar = 0;
+							girar = 1;
+						end;
+						2'b01: begin
+							avancar = 1;
+							girar = 0;
+						end
+						2'b10: begin
+							avancar = 0;
+							girar = 1;
+						end
+						2'b11: begin
+							avancar = 0;
+							girar = 1;
+						end
+					endcase
+			end
+			
+			rotacionando: begin
+				case ({head, left}
+						2'b00: begin
+							avancar = 0;
+							girar = 1;
+						end;
+						2'b01: begin
+							avancar = 1;
+							girar = 0;
+						end
+						2'b10: begin
+							avancar = 0;
+							girar = 1;
+						end
+						2'b11: begin
+							avancar = 0;
+							girar = 1;
+						end
+					endcase
+			end
+		endcase
+	end
+	
+	
+endmodule

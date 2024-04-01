@@ -1,0 +1,6 @@
+
+State Machine - |Robo|state
+Name state.procurandoMuro state.acompanhandoMuro state.rotacionando 
+state.procurandoMuro 0 0 0 
+state.rotacionando 1 0 1 
+state.acompanhandoMuro 1 1 0 
