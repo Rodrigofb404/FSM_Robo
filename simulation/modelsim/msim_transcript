@@ -10,31 +10,31 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/rodri/OneDrive/Documentos/Verilog/Robo {C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/Robo.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/rodri/OneDrive/Documentos/03\ -\ Verilog/Robo {C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo/Robo.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:12:47 on Mar 22,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/rodri/OneDrive/Documentos/Verilog/Robo" C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/Robo.v 
+# Start time: 16:34:41 on Apr 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo" C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo/Robo.v 
 # -- Compiling module Robo
 # 
 # Top level modules:
 # 	Robo
-# End time: 18:12:47 on Mar 22,2024, Elapsed time: 0:00:00
+# End time: 16:34:41 on Apr 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/rodri/OneDrive/Documentos/Verilog/Robo {C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/Robo_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/rodri/OneDrive/Documentos/03\ -\ Verilog/Robo {C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo/Robo_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:12:47 on Mar 22,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/rodri/OneDrive/Documentos/Verilog/Robo" C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/Robo_tb.v 
+# Start time: 16:34:41 on Apr 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo" C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo/Robo_tb.v 
 # -- Compiling module Robo_TB
 # 
 # Top level modules:
 # 	Robo_TB
-# End time: 18:12:47 on Mar 22,2024, Elapsed time: 0:00:00
+# End time: 16:34:42 on Apr 01,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Robo_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Robo_tb 
-# Start time: 18:12:47 on Mar 22,2024
+# Start time: 16:34:42 on Apr 01,2024
 # ** Error: (vsim-3170) Could not find 'Robo_tb'.
 #         Searched libraries:
 #             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera
@@ -43,48 +43,16 @@
 #             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_mf
 #             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/altera_lnsim
 #             C:/intelFPGA_lite/18.1/modelsim_ase/altera/verilog/cycloneive
-#             C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/simulation/modelsim/rtl_work
-#             C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/simulation/modelsim/rtl_work
+#             C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo/simulation/modelsim/rtl_work
+#             C:/Users/rodri/OneDrive/Documentos/03 - Verilog/Robo/simulation/modelsim/rtl_work
 # Error loading design
 # Error: Error loading design
 #        Pausing macro execution
 # MACRO ./Robo_run_msim_rtl_verilog.do PAUSED at line 12
 vsim work.Robo_TB
 # vsim work.Robo_TB 
-# Start time: 18:12:47 on Mar 22,2024
+# Start time: 16:34:42 on Apr 01,2024
 # Loading work.Robo_TB
 # Loading work.Robo
-add wave -position end  sim:/Robo_TB/clock
-add wave -position end  sim:/Robo_TB/reset
-add wave -position end  sim:/Robo_TB/head
-add wave -position end  sim:/Robo_TB/left
-add wave -position end  sim:/Robo_TB/avancar
-add wave -position end  sim:/Robo_TB/girar
-add wave -position end  sim:/Robo_TB/Mapa
-add wave -position end  sim:/Robo_TB/Linha_Mapa
-add wave -position end  sim:/Robo_TB/Linha_Robo
-add wave -position end  sim:/Robo_TB/Coluna_Robo
-add wave -position end  sim:/Robo_TB/Orientacao_Robo
-add wave -position end  sim:/Robo_TB/Qtd_Movimentos
-add wave -position end  sim:/Robo_TB/String_Orientacao_Robo
-add wave -position end  sim:/Robo_TB/i
-run
-# ** Warning: (vsim-7) Failed to open readmem file "Mapa.txt" in read mode.
-# No such file or directory. (errno = ENOENT)    : C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/Robo_tb.v(31)
-#    Time: 0 ns  Iteration: 0  Instance: /Robo_TB
-# Linha =  x Coluna =  x Orientacao =        Movimentos =   x
-run
-# ** Note: $stop    : C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/Robo_tb.v(61)
-#    Time: 150 ns  Iteration: 0  Instance: /Robo_TB
-# Break in Module Robo_TB at C:/Users/rodri/OneDrive/Documentos/Verilog/Robo/Robo_tb.v line 61
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 18:13:55 on Mar 22,2024, Elapsed time: 0:01:08
-# Errors: 1, Warnings: 1
+# End time: 16:34:48 on Apr 01,2024, Elapsed time: 0:00:06
+# Errors: 1, Warnings: 0
